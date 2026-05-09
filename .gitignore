@@ -1,0 +1,16 @@
+# Secrets
+.env
+auth.json
+
+# Session & logs (too large / private)
+sessions/
+logs/
+
+# Cache
+audio_cache/
+__pycache__/
+*.pyc
+
+# Large model files or temp data
+*.gguf
+*.bin
