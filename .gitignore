@@ -1,16 +1,30 @@
+# Large directories
+checkpoints/
+hermes-agent/
+sessions/
+logs/
+state-snapshots/
+bin/
+cache/
+images/
+
+# Databases (large, auto-generated)
+state.db
+state.db-wal
+state.db-shm
+memory_store.db*
+kanban.db
+
 # Secrets
 .env
 auth.json
-
-# Session & logs (too large / private)
-sessions/
-logs/
 
 # Cache
 audio_cache/
 __pycache__/
 *.pyc
 
-# Large model files or temp data
+# Large model files
 *.gguf
 *.bin
+models_dev_cache.json
