@@ -1,0 +1,6 @@
+11:29:08 ENTER: queued interrupt msg='还是不行哦，但是控制台没抱错', agent_running=True
+11:29:08 interrupt fired: msg='还是不行哦，但是控制台没抱错', children=0, parent._interrupt=True
+13:33:16 ENTER: queued interrupt msg='sg', agent_running=True
+13:33:16 interrupt fired: msg='sg', children=0, parent._interrupt=True
+14:56:05 interrupt fired: msg='说错了，1245修复，3是我要求的，修复完不要push', children=0, parent._interrupt=True
+14:56:05 ENTER: queued interrupt msg='说错了，1245修复，3是我要求的，修复完不要push', agent_running=True

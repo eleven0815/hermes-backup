@@ -1,0 +1,56 @@
+#!/bin/bash
+#
+# Pre-commit hook for layered-architecture Java projects.
+# Designed for multi-repo layouts: copy into each module's .git/hooks/
+#
+# Behavior:
+#   1. Auto git-add unstaged changes
+#   2. Check newly added (diff-filter=A) Java files against structure rules
+#   3. Block commit if violations found; suggest --no-verify escape hatch
+
+set -e
+
+# Derive paths from hook location: .git/hooks/pre-commit -> module root -> project root
+HOOK_DIR="$(cd "$(dirname "$0")" && pwd)"
+MODULE_DIR="$(cd "$HOOK_DIR/../.." && pwd)"
+PROJECT_ROOT="$(cd "$MODULE_DIR/.." && pwd)"
+SCRIPT="$PROJECT_ROOT/scripts/check-structure.py"
+
+echo "🔍 pre-commit: 检查项目结构规范..."
+
+if [ ! -f "$SCRIPT" ]; then
+    echo "❌ 未找到 $SCRIPT，跳过规范检查"
+    exit 0
+fi
+
+# Check staged new files
+STAGED_NEW=$(git diff --cached --name-only --diff-filter-A)
+
+if [ -z "$STAGED_NEW" ]; then
+    python3 "$SCRIPT" --git-staged
+    exit $?
+fi
+
+# Auto-add unstaged changes
+UNSTAGED=$(git diff --name-only)
+if [ -n "$UNSTAGED" ]; then
+    echo "✅ 自动 git add 未暂存变更:"
+    echo "$UNSTAGED" | while read -r file; do
+        git add "$file" 2>/dev/null || true
+        echo "   → $file"
+    done
+fi
+
+python3 "$SCRIPT" --git-staged
+EXIT_CODE=$?
+
+if [ $EXIT_CODE -ne 0 ]; then
+    echo ""
+    echo "⚠️  pre-commit: 发现规范问题，已阻止 commit。"
+    echo "   如果确认无误，可以使用: git commit --no-verify -m 'your message'"
+    echo "   （但请先确认上述问题是否可以忽略）"
+    exit 1
+fi
+
+echo "✅ pre-commit: 检查通过"
+exit 0

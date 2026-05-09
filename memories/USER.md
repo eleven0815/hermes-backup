@@ -1,5 +1,5 @@
-User is building a Tauri + React desktop music player app at /Users/luoyang/Desktop/MusicPlayer. UI: NetEase Cloud Music style (dark theme, #EC4141 red accent). User prefers Tauri over Electron/Python. Key frustration: I kept claiming fixes were complete without properly testing them. User expects actual verification before declaring issues resolved. Always test fixes end-to-end before reporting success.
-§
-User prefers sequential execution ('一个一个来' / one by one) over parallel batch operations. When configuring or setting up multiple things, ask before running multiple commands simultaneously, and proceed step-by-step.
+User communicates in Chinese, prefers terse responses. Key frustration: "I kept claiming fixes were complete without properly testing them." Expects ACTUAL VERIFICATION before declaring issues resolved. Decisive: gives short directives ("4已经添加了", "可以帮我运行吗 5"). GitHub: eleven0815/hermes-backup. SSH key on Mac registered to openclaw@gitee — SSH to github.com fails (DNS pollution 223.5.5.5). Feishu app: cli_a9759cc173b89bc2, bot capability not yet enabled/published. Building Tauri+React music player at /Users/luoyang/Desktop/MusicPlayer. Preferred stack: Tauri over Electron/Python. UI ref: NetEase Cloud Music style.
 §
 用户偏好逐步执行，不喜欢一次性并行炸弹式操作。配置复杂系统时应分层步骤展示，等用户确认后再进行下一步。
+§
+User prefers concise, minimal responses. Avoid verbose explanations and multi-paragraph preambles. User signals intent with very short messages (e.g., "MAC", "好的，继续，一个一个来"). When user says "一个一个来" (one by one), proceed step-by-step and wait for confirmation before moving to the next step.
