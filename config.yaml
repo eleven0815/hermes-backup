@@ -1,6 +1,6 @@
 model:
-  default: kimi-k2.6
-  provider: custom
+  default: MiniMax-M2.7
+  provider: minimax
   base_url: https://api.moonshot.cn/v1
 providers:
   custom:
@@ -402,6 +402,14 @@ custom_providers:
     kimi-k2.6:
       name: Kimi K2.6
   model: kimi-k2.6
+- name: minimax
+  base_url: https://api.minimaxi.com/v1
+  api_key: sk-cp-TDuBZ11orqUVCSSPp4YGFCxLXOGczkFc0j1y10bss3pave36rfHCDnSAxTOhHraiGMssC4bZfvma3XCGKXdwd26tOhhrVnZFA_1AKtLkz-BL4eXi_pB9CQQ
+  api_mode: chat_completions
+  models:
+    MiniMax-M2.7:
+      name: MiniMax M2.7
+  model: MiniMax-M2.7
 feishu:
   app_id: cli_a9759cc173b89bc2
   app_secret: Spbb4MVgw63GGhViDIh9vbonQbbbFRpx
