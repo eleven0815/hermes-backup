@@ -57,17 +57,17 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-09T19:37:35.869339+08:00",
-      "next_run_at": "2026-05-12T03:00:00+08:00",
-      "last_run_at": "2026-05-10T05:56:01.264241+08:00",
+      "next_run_at": "2026-05-14T03:00:00+08:00",
+      "last_run_at": "2026-05-11T03:12:59.203598+08:00",
       "last_status": "error",
-      "last_error": "TimeoutError: Cron job 'daily-backup' idle for 931s (limit 600s) \u2014 last activity: stale stream detected after 1010s, reconnecting",
+      "last_error": "RuntimeError: Provider 'minimax' is set in config.yaml but no API key was found. Set the MINIMAX_API_KEY environment variable, or switch to a different provider with `hermes model`.",
       "last_delivery_error": null,
       "deliver": "local",
       "origin": null,
@@ -94,15 +94,15 @@
       "schedule_display": "*/2 * * * *",
       "repeat": {
         "times": null,
-        "completed": 251
+        "completed": 1022
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-09T19:43:01.974733+08:00",
-      "next_run_at": "2026-05-11T03:14:00+08:00",
-      "last_run_at": "2026-05-10T22:52:13.260851+08:00",
+      "next_run_at": "2026-05-13T04:00:00+08:00",
+      "last_run_at": "2026-05-12T21:52:41.847659+08:00",
       "last_status": "error",
       "last_error": "RuntimeError: Provider 'minimax' is set in config.yaml but no API key was found. Set the MINIMAX_API_KEY environment variable, or switch to a different provider with `hermes model`.",
       "last_delivery_error": null,
@@ -112,5 +112,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-05-11T03:12:54.707636+08:00"
+  "updated_at": "2026-05-13T03:58:49.554681+08:00"
 }
