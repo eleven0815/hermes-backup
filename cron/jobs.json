@@ -57,15 +57,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 37
+        "completed": 38
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-09T19:37:35.869339+08:00",
-      "next_run_at": "2026-07-08T03:00:00+08:00",
-      "last_run_at": "2026-07-05T03:01:22.591639+08:00",
+      "next_run_at": "2026-07-09T03:00:00+08:00",
+      "last_run_at": "2026-07-07T03:26:14.979605+08:00",
       "last_status": "error",
       "last_error": "RuntimeError: Provider 'minimax' is set in config.yaml but no API key was found. Set the MINIMAX_API_KEY environment variable, or switch to a different provider with `hermes model`.",
       "last_delivery_error": null,
@@ -94,15 +94,15 @@
       "schedule_display": "*/2 * * * *",
       "repeat": {
         "times": null,
-        "completed": 23545
+        "completed": 24029
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-05-09T19:43:01.974733+08:00",
-      "next_run_at": "2026-07-07T03:28:00+08:00",
-      "last_run_at": "2026-07-06T22:22:11.304622+08:00",
+      "next_run_at": "2026-07-08T03:00:00+08:00",
+      "last_run_at": "2026-07-08T02:58:50.012640+08:00",
       "last_status": "error",
       "last_error": "RuntimeError: Provider 'minimax' is set in config.yaml but no API key was found. Set the MINIMAX_API_KEY environment variable, or switch to a different provider with `hermes model`.",
       "last_delivery_error": null,
@@ -112,5 +112,5 @@
       "workdir": null
     }
   ],
-  "updated_at": "2026-07-07T03:26:13.122375+08:00"
+  "updated_at": "2026-07-08T03:00:50.208408+08:00"
 }
